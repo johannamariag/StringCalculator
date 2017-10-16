@@ -10,10 +10,14 @@ public class Calculator {
     		else{
     			if(numbers.contains(",")){
     				String N[] = numbers.split(",");
-    				return Integer.parseInt(N[0]) + Integer.parseInt(N[1]);
+    				return toInt(N[0]) + toInt(N[1]);
     			}
     			return 1;
     		}
+    }
+
+    private static int toInt(String number){
+    	return Integer.parseInt(number);
     }
 
 }
