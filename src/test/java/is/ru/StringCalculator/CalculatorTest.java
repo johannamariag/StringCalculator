@@ -20,8 +20,14 @@ public class CalculatorTest{
 	public void testMultipleNumbers() {
 		assertEquals(6, Calculator.add("1,2,3"));
 	}
-
-
+	@Test
+    public void testLineSplit(){
+    	assertEquals(6, Calculator.add("1\n2,3"));
+    }
+    @Test
+    public void testUnknownAmountOfNumbers(){
+    	assertEquals(3 + 6 + 1 + 20, Calculator.add("3, 6, 1, 20"));
+    }
 }
 
 
