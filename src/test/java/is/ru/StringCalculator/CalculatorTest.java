@@ -21,10 +21,13 @@ public class CalculatorTest{
 		assertEquals(6, Calculator.add("1,2,3"));
 	}
 
+    
     @Test
     public void testLineSplit(){
     	assertEquals(6, Calculator.add("1\n2,3"));
+    	assertEquals(10, Calculator.add("2,2\n6"));
     }
+
 
 
 }
