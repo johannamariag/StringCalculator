@@ -9,8 +9,7 @@ public class Calculator {
     		}
     		else {
     			if(numbers.contains(",") || numbers.contains("\n")) {
-    				String d = ",|\n";
-    				return sum(numbers.split(d));
+    				return sum(splitNumbers(numbers));
     			}
     		}
     			return 1;
@@ -26,6 +25,11 @@ public class Calculator {
     		total += toInt(number);
     	}
     	return total;
+    }
+
+    private static String[] splitNumbers(String numbers){
+    	String d = ",|\n";
+    	return numbers.split(d);
     }
 
 
